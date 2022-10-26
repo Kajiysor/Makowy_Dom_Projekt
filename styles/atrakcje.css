@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.card img {
+    /*max-height: 350px;*/
+    background-position: center;
+    object-fit: cover;
+    max-height: 43vh;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #596872;
+    color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .grid-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}
